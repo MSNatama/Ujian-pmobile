@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Sports</string>
+    <string name="action_switch_layout">Switch Layout</string>
+    <string name="sport1">Airsoft</string>
+    <string name="sport2">Badminton</string>
+    <string name="sport3">Basketball</string>
+    <string name="sport4">Cycling</string>
+    <string name="sport5">Hiking</string>
+    <string name="sport6">Soccer</string>
+    <string name="sport7">Swimming</string>
+    <string name="Sport8">Table Tennis</string>
+    <string name="sport9">Tennis</string>
+    <string name="sport10">Volleyball</string>
+    <string name="des1">Individual or Team</string>
+    <string name="des2" >1 or 2 per Team</string>
+    <string name="des3" >5 per Team</string>
+    <string name="des4" >Individual or Group</string>
+    <string name="des5" >Individual or Group</string>
+    <string name="des6" >11 per Team</string>
+    <string name="des7" >Individual</string>
+    <string name="des8" >1 or 2 per Team</string>
+    <string name="des9" >1 or 2 per Team</string>
+    <string name="des10" >6 per Team</string>
+</resources>
