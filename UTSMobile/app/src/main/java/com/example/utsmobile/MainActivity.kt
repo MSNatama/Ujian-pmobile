@@ -1,5 +1,6 @@
 package com.example.utsmobile
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -9,7 +10,9 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.utsmobile.adapter.ItemAdapter
+import com.example.utsmobile.data.DataSource
 import com.example.utsmobile.databinding.ActivityMainBinding
+import java.io.Serializable
 
 class MainActivity : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView
@@ -20,8 +23,22 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         recyclerView = binding.recyclerView
-        recyclerView.adapter = ItemAdapter()
-        recyclerView.setHasFixedSize(false)
+        val adapter = ItemAdapter()
+        recyclerView.adapter = adapter
+        adapter.setOnItemClickListener(object : ItemAdapter.OnItemClickListener{
+
+            override fun onItemClick(postition: Int) {
+                super.onItemClick(postition)
+                val data = DataSource.dataNBA
+                val intent = Intent(this@MainActivity, DetailActivity::class.java)
+
+                intent.putExtra("position", postition)
+                intent.putExtra("data", data[postition] as Serializable)
+                startActivity(intent)
+
+            }
+        })
+        recyclerView.setHasFixedSize(true)
     }
 
     private fun chooseLayout() {
@@ -30,8 +47,22 @@ class MainActivity : AppCompatActivity() {
         } else {
             recyclerView.layoutManager = GridLayoutManager(this, 2)
         }
-        recyclerView.adapter = ItemAdapter()
+        val adapter = ItemAdapter()
+        recyclerView.adapter = adapter
+        adapter.setOnItemClickListener(object : ItemAdapter.OnItemClickListener{
+
+            override fun onItemClick(postition: Int) {
+                super.onItemClick(postition)
+                val data = DataSource.dataNBA
+                val intent = Intent(this@MainActivity, DetailActivity::class.java)
+
+                intent.putExtra("position", postition)
+                intent.putExtra("data", data[postition] as Serializable)
+                startActivity(intent)
+            }
+        })
     }
+
 
     private fun setIcon(menuItem: MenuItem?) {
         if (menuItem == null)

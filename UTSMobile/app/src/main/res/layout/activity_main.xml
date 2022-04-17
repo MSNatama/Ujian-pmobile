@@ -11,7 +11,7 @@
         android:id="@+id/header_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sports List"
+        android:text="Top 10 3-Pointers Made 2022"
         android:textAlignment="center"
         android:textAppearance="?attr/textAppearanceSearchResultTitle"
         app:layout_constraintEnd_toEndOf="parent"

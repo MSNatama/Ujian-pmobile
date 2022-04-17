@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity">
+
+
+    <ImageView
+        android:id="@+id/Det_gambar"
+        android:layout_width="180dp"
+        android:layout_height="220dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/steph" />
+
+    <TextView
+        android:id="@+id/Det_nama"
+        android:textStyle="bold"
+        style="@style/TextAppearance.AppCompat.Display1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/Det_gambar"
+        android:text="@string/nama1" />
+
+    <TextView
+        android:id="@+id/Det_team"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:layout_below="@+id/Det_nama"
+        android:layout_toEndOf="@+id/Det_gambar"
+        android:text="@string/tim" />
+
+    <TextView
+        android:id="@+id/Det_pos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:layout_below="@+id/Det_team"
+        android:layout_toEndOf="@id/Det_gambar"
+        android:text="@string/pos"/>
+
+    <TextView
+        android:id="@+id/Det_jersey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:layout_below="@+id/Det_pos"
+        android:layout_toEndOf="@id/Det_gambar"
+        android:text="@string/jersey"/>
+
+    <TextView
+        android:id="@+id/Det_point"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:layout_below="@+id/Det_jersey"
+        android:layout_toEndOf="@id/Det_gambar"
+        android:text="@string/point"/>
+
+    <TextView
+        android:id="@+id/Det_WH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:layout_below="@+id/Det_point"
+        android:layout_toEndOf="@id/Det_gambar"
+        android:text="@string/hw"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/Det_gambar">
+
+        <TextView
+            android:id="@+id/hasil_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </ScrollView>
+
+</RelativeLayout>
